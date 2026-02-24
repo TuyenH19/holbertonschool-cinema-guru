@@ -1,0 +1,187 @@
+/* Input Component */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.input-container label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0;
+  color: #888;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 21px;
+  padding: 0.5rem 0;
+  padding-left: 0;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #1976D2;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  border-bottom-color: #1976D2;
+}
+
+.input-wrapper input.error {
+  border-bottom-color: #C62828;
+}
+
+/* Alternative: If icon should be inside the label */
+.input-container label .input-icon {
+  position: static;
+  color: #888;
+  font-size: 1.25rem;
+}
+
+
+/* Select Input Component */
+.select-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.select-container label {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  border-bottom: 2px solid #C62828;
+  padding-bottom: 0.25rem;
+  display: inline-block;
+  width: fit-content;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #424242;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+}
+
+.select-container select:hover {
+  background-color: #4a4a4a;
+}
+
+.select-container select:focus {
+  background-color: #505050;
+}
+
+.select-container select option {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.select-container select option:hover,
+.select-container select option:checked {
+  background-color: #666;
+}
+
+/* Button Component */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: #B71C1C;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  outline: none;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background-color: #C62828;
+}
+
+button:active {
+  transform: scale(0.98);
+  background-color: #8B0000;
+}
+
+button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+/* SearchBar Component */
+.search-bar {
+  width: 100%;
+  max-width: 535px;
+  height: 28px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #999;
+  background-color: #2C2C2C;
+  border: 2px solid #1976D2;
+  border-radius: 24px;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #1976D2;
+  background-color: #333;
+  color: #fff;
+}
+
+.search-bar::placeholder {
+  color: #999;
+  font-size: 1rem;
+}
