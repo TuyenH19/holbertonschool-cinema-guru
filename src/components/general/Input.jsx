@@ -7,9 +7,13 @@ function Input({ label, type, className, value, setValue, icon, inputAttributes 
 
   return (
     <div className={`input-container ${className || ''}`}>
-      {label && <label>{label}</label>}
+      {label && (
+        <label>
+          {icon && <span className="input-icon">{icon}</span>}
+          {label}
+        </label>
+      )}
       <div className="input-wrapper">
-        {icon && <span className="input-icon">{icon}</span>}
         <input
           type={type}
           value={value}
