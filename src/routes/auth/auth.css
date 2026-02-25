@@ -1,0 +1,116 @@
+/* Authentication Form Container */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border: 8px solid #000;
+  padding: 0;
+}
+
+/* Toggle Buttons Container */
+.auth-toggle {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.auth-toggle button {
+  flex: 1;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #b71c1c;
+  border: none;
+  cursor: pointer;
+}
+
+
+.auth-toggle button.active {
+  opacity: 1;
+}
+
+.auth-toggle button:not(.active) {
+  opacity: 0.8;
+}
+
+/* Form Content */
+.auth-content {
+  width: 100%;
+  padding: 40px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-content h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* Input Styling Override for Auth */
+.auth-content .input-container {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.auth-content .input-container label {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-content .input-container input {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 3px solid #b71c1c;
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.auth-content .input-container input:focus {
+  border-bottom-color: #d32f2f;
+}
+
+/* Submit Button */
+.auth-content button[type="submit"],
+.auth-content .submit-button {
+  margin-top: 40px;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #b71c1c;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+.auth-content button[type="submit"]:hover,
+.auth-content .submit-button:hover {
+  background-color: #d32f2f;
+}
+
+.auth-content .submit-button::before {
+  margin-right: 5px;
+}
+
+/* Icons */
+.input-icon {
+  color: #ffb3b3;
+  font-size: 20px;
+}
