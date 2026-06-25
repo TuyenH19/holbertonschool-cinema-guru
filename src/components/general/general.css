@@ -16,6 +16,10 @@
   color: white;
 }
 
+.auth-content .input-container label {
+  color: #888;
+}
+
 .input-wrapper {
   position: relative;
   display: flex;
@@ -119,7 +123,7 @@
 }
 
 /* Button Component */
-button {
+button:not(.auth-toggle button):not(.auth-submit-btn) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -138,16 +142,16 @@ button {
   letter-spacing: 0.5px;
 }
 
-button:hover {
+button:not(.auth-toggle button):not(.auth-submit-btn):hover {
   background-color: #C62828;
 }
 
-button:active {
+button:not(.auth-toggle button):not(.auth-submit-btn):active {
   transform: scale(0.98);
   background-color: #8B0000;
 }
 
-button:disabled {
+button:not(.auth-toggle button):not(.auth-submit-btn):disabled {
   background-color: #666;
   cursor: not-allowed;
   opacity: 0.6;
@@ -161,22 +165,37 @@ button:disabled {
 }
 
 /* SearchBar Component */
+.search-bar-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-bar-icon {
+  position: absolute;
+  left: 14px;
+  color: #999;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
 .search-bar {
   width: 100%;
   max-width: 535px;
   height: 28px;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem 0.75rem 2.5rem;
   font-size: 1rem;
   color: #999;
   background-color: #2C2C2C;
-  border: 2px solid #1976D2;
+  border: 2px solid #333;
   border-radius: 24px;
   outline: none;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .search-bar:focus {
-  border-color: #1976D2;
+  border-color: #555;
   background-color: #333;
   color: #fff;
 }

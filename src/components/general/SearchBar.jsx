@@ -1,4 +1,6 @@
 import './general.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function SearchBar({title, setTitle}) {
   const handleInput = (event) => {
@@ -6,13 +8,16 @@ function SearchBar({title, setTitle}) {
   };
 
   return (
-    <>
-      type="text"
-      value={title}
-      onChange={handleInput}
-      placeholder="Search Movies"
-      className="search-bar"
-    </>
+    <div className="search-bar-wrapper">
+      <FontAwesomeIcon icon={faMagnifyingGlass} className="search-bar-icon" />
+      <input
+        type="text"
+        value={title}
+        onChange={handleInput}
+        placeholder="Search Movies"
+        className="search-bar"
+      />
+    </div>
   );
 }
 
