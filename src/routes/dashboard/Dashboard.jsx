@@ -1,6 +1,10 @@
 import './dashboard.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from '../../components/navigation/Header';
 import SideBar from '../../components/navigation/SideBar';
+import HomePage from './HomePage';
+import Favorites from './Favorites';
+import WatchLater from './WatchLater';
 
 function Dashboard({ userUsername, setIsLoggedIn }) {
   return (
@@ -8,6 +12,14 @@ function Dashboard({ userUsername, setIsLoggedIn }) {
       <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn} />
       <div className='dashboard-content'>
         <SideBar />
+        <div className='main-content'>
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/watchlater" element={<WatchLater />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );

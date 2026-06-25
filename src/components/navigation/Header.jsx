@@ -10,6 +10,7 @@ function Header({ userUsername, setIsLoggedIn }) {
 
   return (
     <nav>
+      <span className="nav-brand">Cinema Guru</span>
       <img src="https://picsum.photos/100/100" alt="Avatars" />
       <p>Welcome, {userUsername}</p>
       <span 
