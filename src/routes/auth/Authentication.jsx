@@ -49,13 +49,15 @@ function Authentication({setIsLoggedIn, setUserUsername}) {
       <form className="auth-form" onSubmit={handleSubmit}>
         <div className="auth-toggle">
           <Button
+            type="button"
             label="Sign In"
-            onClick={() => setSwitch(true)}
+            onClick={() => { setSwitch(true); setUsername(''); setPassword(''); }}
             className={_switch ? 'active' : ''}
           />
           <Button
+            type="button"
             label="Sign Up"
-            onClick={() => setSwitch(false)}
+            onClick={() => { setSwitch(false); setUsername(''); setPassword(''); }}
             className={!_switch ? 'active' : ''}
           />
         </div>

@@ -7,7 +7,7 @@ import { faKey, faUser, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 export default function Register({ username, password, setUsername, setPassword }) {
   return (
-    <div>
+    <div className="auth-panel">
       <h2>Create a new account</h2>
       <Input
         icon={<FontAwesomeIcon icon={faUser} />}
@@ -25,9 +25,12 @@ export default function Register({ username, password, setUsername, setPassword 
       />
       <Button
         type="submit"
+        className="auth-submit-btn"
         icon={<FontAwesomeIcon icon={faPlus} />}
         label="Sign Up"
-      />
+      >
+        Sign Up
+      </Button>
     </div>
   )
 }

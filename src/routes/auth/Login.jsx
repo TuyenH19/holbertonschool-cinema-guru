@@ -7,7 +7,7 @@ import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Login({username, password, setUsername, setPassword}) {
   return (
-    <div>
+    <div className="auth-panel">
       <h2>Sign in with your account</h2>
       <Input
         icon={<FontAwesomeIcon icon={faUser} />}
