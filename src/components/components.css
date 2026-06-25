@@ -1,0 +1,26 @@
+.activity-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.activity-item p {
+  margin: 0;
+  color: white;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.activity-username {
+  color: #c23b3b;
+  font-weight: bold;
+}
+
+.activity-title {
+  color: #c23b3b;
+  font-weight: bold;
+}
+
+.activity-item em {
+  font-style: italic;
+  color: white;
+}
