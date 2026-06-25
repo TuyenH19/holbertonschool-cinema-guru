@@ -1,0 +1,299 @@
+/* Tag styles */
+.tag-list,
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  justify-content: flex-end;
+  align-content: flex-start;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 48%;
+  max-width: 48%;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 16px;
+  border: 2px solid #ff1a1a;
+  border-radius: 20px;
+  color: #fff;
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.tag.selected,
+.tag:hover {
+  background: #ff1a1a;
+  color: #fff;
+}
+
+.tag.li.selected {
+  background: #ff1a1a;
+  color: #fff;
+}
+
+.tag.li:hover {
+  background: #ff1a1a;
+  color: #fff;
+}
+
+/* Filter container styles */
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #181818;
+  padding: 20px 28px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  width: 100%;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+/* Left side: search and inputs */
+.filter-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* Each input group */
+.filter-fields > div {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* filter-controls row */
+.filter-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 32px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+/* Stop input-container and select-container from stretching to 100% inside filter */
+.filter-controls .input-container,
+.filter-controls .select-container {
+  width: auto;
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+/* Search bar styling */
+.filter-fields .search-bar-wrapper {
+  width: 100%;
+}
+
+.filter-fields .search-bar {
+  max-width: 100%;
+  width: 100%;
+  background: #2c2c2c;
+  border: 2px solid #333;
+  box-sizing: border-box;
+}
+
+.filter-fields input[type="text"]:focus {
+  border: 2px solid #1976d2;
+}
+
+/* Label and input group */
+.filter-fields label {
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Remove bottom margin from input containers inside filter */
+.filter-fields .input-container {
+  margin-bottom: 0;
+}
+
+.filter-fields input[type="number"] {
+  width: 160px;
+  background: #232323;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #ff1a1a;
+  font-size: 1.1em;
+  padding: 8px 0 6px 0;
+  margin-bottom: 0;
+  outline: none;
+  transition: border-bottom 0.2s;
+}
+
+.filter-fields input[type="number"]:focus {
+  border-bottom: 2px solid #ff1a1a;
+}
+
+/* Override general.css select styling inside filter */
+.filter-fields .select-container select {
+  width: 180px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #ff1a1a;
+  border-radius: 0;
+  font-size: 1.1em;
+  padding: 8px 24px 6px 0;
+  margin-bottom: 0;
+  outline: none;
+  transition: border-bottom 0.2s;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.25rem center;
+  background-size: 1em;
+}
+
+.filter-fields .select-container select:hover,
+.filter-fields .select-container select:focus {
+  background-color: transparent;
+  border-bottom: 2px solid #ff1a1a;
+}
+
+.filter-fields .select-container label {
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.filter-fields .select-container {
+  margin-bottom: 0;
+}
+
+.filter-fields select {
+  width: 180px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #ff1a1a;
+  font-size: 1.1em;
+  padding: 8px 0 6px 0;
+  margin-bottom: 0;
+  outline: none;
+  transition: border-bottom 0.2s;
+}
+
+.filter-fields select:focus {
+  border-bottom: 2px solid #ff1a1a;
+}
+
+
+
+/* MovieCard container */
+.movie-card {
+  background: #181818;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+}
+
+/* Movie image/banner */
+.movie-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Actions (icons) */
+.movie-actions {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+.movie-actions .favorite-active,
+.movie-actions .watchlater-active {
+  color: #ff1a1a;
+}
+
+.movie-actions .favorite-inactive,
+.movie-actions .watchlater-inactive {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.movie-actions svg {
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.movie-actions svg:hover {
+  color: #ff1a1a;
+}
+
+/* Movie title */
+.movie-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 14px 0 8px 0;
+  padding: 0 14px;
+  color: #fff;
+}
+
+/* Movie synopsis */
+.movie-card-synopsis {
+  font-size: 0.9em;
+  color: #ccc;
+  margin: 0 0 12px 0;
+  padding: 0 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Genres */
+.movie-card-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 14px 14px 14px;
+  list-style: none;
+  margin: auto 0 0 0;
+}
+
+.genre-tag {
+  background: #ff1a1a;
+  color: #fff;
+  border-radius: 16px;
+  padding: 4px 16px;
+  font-weight: bold;
+  font-size: 1em;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* Tilter */
+.filter-fields .input-wrapper input {
+  color: white;
+  border-bottom: 2px red;
+}
